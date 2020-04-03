@@ -1,6 +1,6 @@
 {
     "name": "sim-manage",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "main": "dist/index.js",
     "license": "MIT",
     "scripts": {
@@ -28,7 +28,7 @@
         "nodemon": "^2.0.2"
     },
     "bin": {
-      "1ot": "./bin/demo-global.js"
+      "1ot": "./bin/global.js"
     },
     "preferGlobal": true
 }
