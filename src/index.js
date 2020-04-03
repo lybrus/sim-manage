@@ -1,6 +1,6 @@
 import commandLineArgs from 'command-line-args'
-import request from './request'
 import auth from './handlers/auth'
+import sims from './handlers/sims'
 
 const mainDefinitions = [
     { name: 'command', defaultOption: true }
@@ -8,15 +8,20 @@ const mainDefinitions = [
 const mainOptions = commandLineArgs(mainDefinitions, { stopAtFirstUnknown: true })
 
 const commandsDefinitions = {
-    auth
+    auth,
+    sims
 }
 
 const { command, _unknown: argv = [] } = mainOptions
 
-if (commandsDefinitions[command]) {
-    const { definitions, handle } = commandsDefinitions[command]
+;(async () => {
+    if (commandsDefinitions[command]) {
+        const { definitions, handle } = commandsDefinitions[command]
 
-    const commandOptions = commandLineArgs(definitions, { argv })
+        const commandOptions = commandLineArgs(definitions, { argv })
 
-    handle(commandOptions)
-}
+        const result = await handle(commandOptions)
+
+        console.log(result)
+    }
+})()

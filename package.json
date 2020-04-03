@@ -1,17 +1,17 @@
 {
     "name": "sim-manage",
-    "version": "1.0.3",
-    "main": "dist/index.js",
+    "version": "1.1.0",
+    "main": "dist/global.js",
     "license": "MIT",
     "scripts": {
         "start": "nodemon --exec babel-node src/index.js --port 57689",
         "clean": "rm -rf dist",
         "prebuild": "yarn clean",
-        "build": "babel src --out-dir dist"
+        "build": "rollup -c"
     },
     "dependencies": {
-        "command-line-args": "^5.1.1",
-        "request-promise": "^4.2.5"
+        "bent": "^7.1.2",
+        "command-line-args": "^5.1.1"
     },
     "devDependencies": {
         "@babel/cli": "^7.8.4",
@@ -20,16 +20,19 @@
         "@babel/plugin-proposal-class-properties": "^7.8.3",
         "@babel/plugin-syntax-export-namespace-from": "^7.8.3",
         "@babel/preset-env": "^7.9.0",
+        "@rollup/plugin-commonjs": "^11.0.2",
+        "@rollup/plugin-node-resolve": "^7.1.1",
         "babel-eslint": "^10.1.0",
         "babel-jest": "^25.2.6",
         "babel-plugin-inline-json-import": "^0.3.2",
         "babel-plugin-root-import": "^6.5.0",
         "eslint-plugin-babel": "^5.3.0",
-        "nodemon": "^2.0.2"
+        "nodemon": "^2.0.2",
+        "rollup": "^2.3.2",
+        "rollup-plugin-babel": "^4.4.0"
     },
     "bin": {
-        "1ot": "./bin/global.js",
-        "ttt1": "./bin/global.js"
+        "1ot": "./bin/global.js"
     },
     "preferGlobal": true
 }
