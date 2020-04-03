@@ -28,7 +28,8 @@
         "nodemon": "^2.0.2"
     },
     "bin": {
-      "1ot": "./bin/global.js"
+        "1ot": "./bin/global.js",
+        "ttt1": "./bin/global.js"
     },
     "preferGlobal": true
 }
