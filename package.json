@@ -1,0 +1,30 @@
+{
+    "name": "sim-manage",
+    "version": "1.0.0",
+    "main": "index.js",
+    "license": "MIT",
+    "scripts": {
+        "start": "nodemon --exec babel-node src/index.js --port 57689",
+        "clean": "rm -rf dist",
+        "prebuild": "yarn clean",
+        "build": "babel src --out-dir dist"
+    },
+    "dependencies": {
+        "command-line-args": "^5.1.1",
+        "request-promise": "^4.2.5"
+    },
+    "devDependencies": {
+        "@babel/cli": "^7.8.4",
+        "@babel/core": "^7.9.0",
+        "@babel/node": "^7.8.7",
+        "@babel/plugin-proposal-class-properties": "^7.8.3",
+        "@babel/plugin-syntax-export-namespace-from": "^7.8.3",
+        "@babel/preset-env": "^7.9.0",
+        "babel-eslint": "^10.1.0",
+        "babel-jest": "^25.2.6",
+        "babel-plugin-inline-json-import": "^0.3.2",
+        "babel-plugin-root-import": "^6.5.0",
+        "eslint-plugin-babel": "^5.3.0",
+        "nodemon": "^2.0.2"
+    }
+}

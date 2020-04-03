@@ -1,0 +1,16 @@
+.DS_Store
+
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+node_modules
+coverage
+
+log
+
+.env
